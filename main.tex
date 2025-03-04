@@ -1,0 +1,107 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.40in, right=0.40in, top=0.40in, bottom=0.40in]{geometry} % Smaller page margins
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{titling}
+\usepackage{array} 
+
+% Define colors
+\definecolor{darkblue}{RGB}{50, 110, 66}
+
+% Set font and spacing
+\renewcommand{\baselinestretch}{1.2}
+\pagestyle{empty}
+
+% Title formatting with divider under section titles
+\titleformat{\section}[block]{\fontsize{15}{15}\selectfont\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+
+% Custom command for job entry formatting (aligns company and role left, location and years right)
+\newcommand{\jobentry}[4]{
+    \noindent
+    \textbf{\large#3}{ $\cdot$ }{#1} \hfill \textit{#2, #4}
+    \vspace{-0.5em} % Reduces space between job entries
+}
+
+% Adjust the spacing for itemized lists (bullet points)
+\setlist[itemize]{nosep, left=0em, itemsep=0em, topsep=0.5em}
+
+\begin{document}
+
+% Name and Contact Info
+\begin{center}
+    {\fontsize{20}{20}\textbf{Ece Pidik}\selectfont} \\
+    \vspace{0.2cm}
+    \href{mailto:pidik.ece@gmail.com}{pidik.ece@gmail.com} \textbullet{} 
+    (123) 456-7890 \textbullet{} 
+    \href{https://www.linkedin.com/in/ecepidik}{linkedin.com/in/ecepidik} \textbullet{} 
+    \href{https://github.com/yourusername}{GitHub}
+\end{center}
+
+\vspace{-0.2cm}
+\noindent
+\begin{minipage}[t]{0.35\textwidth}
+    \section*{Education}
+    \noindent
+    \textbf {\large McGill University} \\
+    Bachelors of Software Engineering\\
+    Montreal, Canada \\
+    GPA: 3.43/4.0
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.60\textwidth}
+    \section*{Summary}
+    \noindent
+    Senior full-stack developer striving to design and build robust, reliable and scalable solutions that meet business objectives. Experienced with project management and requirement gathering. \\
+USA citizen and Canadian permanent resident.
+\end{minipage}
+
+\vspace{-0.2cm}
+% Skills Section
+\section*{Skills}
+\noindent
+\textbf{Programming Languages:} Java, Python, Typescript, Javascript, SQL \\
+\textbf{Technologies:} Spring Boot Framework, JUnit, React, Redux, Jest, GraphQL, REST
+
+\vspace{-0.2cm}
+% Employment Section
+\section*{Employment}
+\jobentry{RBC Capital Markets}{Montreal}{Senior Developer}{Jan. 2022 – Present}
+\begin{itemize}[left=0em]
+    \item Architected a strategic, event-driven architecture with microservices to orchestrate and monitor risk calculations for trading portfolios across multiple source systems.
+    \item Led the development of the risk orchestration application which was recognized as a major milestone for the Risk Modernization Program.
+    \item Designed schema and data models to aggregate and standardize trading portfolio definitions across multiple asset classes and risk engines to reduce data redundancy and enhance overall operational efficiency for risk calculation.
+    \item Collaborated with business users and enterprise architects to gather requirements. Worked with project manager to break down complex front-office needs into actionable tasks, prioritize and provide timelines for deliverables.
+\end{itemize}
+\vspace{0.5em}
+\jobentry{RBC Capital Markets}{Toronto}{Technical Systems Analyst}{July 2022 – Dec. 2021}
+\begin{itemize}[left=0em]
+    \item Worked with agile software development strategy using React with Typescript on the frontend and Java Spring Framework on the backend
+    \item Developed REST and GraphQL APIs that allowed the downstream risk engine users to efficiently retrieve, update and monitor risk calculation data
+    \item Integrated Risk Services application with micro services to enable flows like authentication, authorization, and message publishing
+\end{itemize}
+\vspace{0.5em}
+\jobentry{Gorilla Group}{Montreal}{Associate Developer}{July 2019 – Feb. 2020}
+\begin{itemize}[left=0em]
+    \item Leveraged the SAP Hybris platform to develop customized and immersive commerce experiences for Business-to-Business and Business-to-Client customers.
+    \item Communicated with clients and business analysts to provide progress reports on the objectives.
+    \item Independently learned the Adobe Experience Manager and Magento platforms to be a more versatile developer, as well as practicing consulting skills to provide a better experience to the clients.
+\end{itemize}
+% Volunteering Section
+\section*{Volunteering}
+\noindent
+\textbf{Lead coordinator}  {$\bm{\cdot}$}  RBC QTS  Internship Committee \hfill Jan. 2023 – Feb. 2024
+\vspace{-0.5em}
+\begin{itemize}[left=0em]
+    \item Coordinated the internship program by organizing regular events for the interns, having check-ins with managers as necessary and helping orchestrate the hiring process.
+    \item Provide mentorship to interns to resolve issues they have with their team, manager and peers and to help with career growth.
+\end{itemize}
+
+% Awards Section
+\section*{Awards}
+\noindent
+\textbf{QTS PERFORMANCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill Dec. 2022 \\
+\textbf{MADE A DIFFERENCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill July 2022 \\
+
+\end{document}
