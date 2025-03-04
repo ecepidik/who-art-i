@@ -1,11 +1,15 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage[left=0.40in, right=0.40in, top=0.40in, bottom=0.40in]{geometry} % Smaller page margins
+\usepackage[left=0.40in, right=0.40in, top=0.35in, bottom=0.35in]{geometry} % Smaller page margins
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{titling}
 \usepackage{array} 
+\usepackage{fontspec}
+
+% \setmainfont[]{Helvetica Neue.ttc}
+
 
 % Define colors
 \definecolor{darkblue}{RGB}{50, 110, 66}
@@ -15,7 +19,7 @@
 \pagestyle{empty}
 
 % Title formatting with divider under section titles
-\titleformat{\section}[block]{\fontsize{15}{15}\selectfont\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titleformat{\section}[block]{\fontsize{14}{15}\selectfont\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
 
 % Custom command for job entry formatting (aligns company and role left, location and years right)
 \newcommand{\jobentry}[4]{
@@ -31,77 +35,80 @@
 
 % Name and Contact Info
 \begin{center}
-    {\fontsize{20}{20}\textbf{Ece Pidik}\selectfont} \\
-    \vspace{0.2cm}
+    {\fontsize{18}{18}\textbf{Ece Pidik}\selectfont} \\
+    \vspace{0.1em}
     \href{mailto:pidik.ece@gmail.com}{pidik.ece@gmail.com} \textbullet{} 
     (123) 456-7890 \textbullet{} 
     \href{https://www.linkedin.com/in/ecepidik}{linkedin.com/in/ecepidik} \textbullet{} 
-    \href{https://github.com/yourusername}{GitHub}
+    \href{github.com/ecepidik}{github.com/ecepidik}
 \end{center}
 
-\vspace{-0.2cm}
+\vspace{-0.4cm}
 \noindent
-\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{0.38\textwidth}
     \section*{Education}
     \noindent
-    \textbf {\large McGill University} \\
+    \textbf {\large McGill University} - Montreal, Canada \\
     Bachelors of Software Engineering\\
-    Montreal, Canada \\
     GPA: 3.43/4.0
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.60\textwidth}
+\begin{minipage}[t]{0.58\textwidth}
     \section*{Summary}
     \noindent
-    Senior full-stack developer striving to design and build robust, reliable and scalable solutions that meet business objectives. Experienced with project management and requirement gathering. \\
-USA citizen and Canadian permanent resident.
+    Senior full-stack developer striving to design and build robust, reliable and scalable solutions that meet business objectives. Experienced with project management and requirement gathering.
 \end{minipage}
 
-\vspace{-0.2cm}
+\vspace{-0.3cm}
 % Skills Section
 \section*{Skills}
 \noindent
 \textbf{Programming Languages:} Java, Python, Typescript, Javascript, SQL \\
-\textbf{Technologies:} Spring Boot Framework, JUnit, React, Redux, Jest, GraphQL, REST
+\textbf{Technologies:} Spring Framework, JUnit, Maven, React, Redux, Webpack, Jest, GraphQL, REST, Kubernetes, Helm, Git \\
+\textbf{Languages}
+Native level English,
+B1 level French
 
-\vspace{-0.2cm}
+\vspace{-0.3cm}
 % Employment Section
 \section*{Employment}
 \jobentry{RBC Capital Markets}{Montreal}{Senior Developer}{Jan. 2022 – Present}
 \begin{itemize}[left=0em]
-    \item Architected a strategic, event-driven architecture with microservices to orchestrate and monitor risk calculations for trading portfolios across multiple source systems.
-    \item Led the development of the risk orchestration application which was recognized as a major milestone for the Risk Modernization Program.
-    \item Designed schema and data models to aggregate and standardize trading portfolio definitions across multiple asset classes and risk engines to reduce data redundancy and enhance overall operational efficiency for risk calculation.
-    \item Collaborated with business users and enterprise architects to gather requirements. Worked with project manager to break down complex front-office needs into actionable tasks, prioritize and provide timelines for deliverables.
+    \item Contributing significantly to the architecture of a greenfield project under Funding and Liquidity Technology and leading the hands-on development using Java Spring Boot Framework
+    \item Managing the DevOps tasks including containerizing with Kubernetes; automating CI/CD pipeline via tools like Jenkins, Helm and SonarQube; integrating the application with data analytics tools like Grafana and Jaeger for monitoring
+    \item Previously designed and led the development of a strategic, event-driven architecture to orchestrate and monitor risk calculations for trading portfolios across multiple source system under the Risk Modernization Program.
+    \item Revised data models and DB schema to aggregate and standardize trading portfolio definitions across multiple asset classes and source systems to reduce data redundancy and enhance overall operational efficiency for risk calculation.
+    \item Collaborating with business users and enterprise architects to gather requirements and working with project manager to break down complex front-office needs into actionable tasks, prioritize and provide timelines for deliverables.
 \end{itemize}
-\vspace{0.5em}
+\vspace{0.4em}
 \jobentry{RBC Capital Markets}{Toronto}{Technical Systems Analyst}{July 2022 – Dec. 2021}
 \begin{itemize}[left=0em]
-    \item Worked with agile software development strategy using React with Typescript on the frontend and Java Spring Framework on the backend
-    \item Developed REST and GraphQL APIs that allowed the downstream risk engine users to efficiently retrieve, update and monitor risk calculation data
+    \item Worked in an agile team developing functionalities for a risk calculation application using React with Typescript on the frontend and Java Spring Framework on the backend
+    \item Developed REST and GraphQL APIs that allowed the downstream users to efficiently retrieve, update and monitor risk calculation data
     \item Integrated Risk Services application with micro services to enable flows like authentication, authorization, and message publishing
 \end{itemize}
-\vspace{0.5em}
+\vspace{0.4em}
 \jobentry{Gorilla Group}{Montreal}{Associate Developer}{July 2019 – Feb. 2020}
 \begin{itemize}[left=0em]
     \item Leveraged the SAP Hybris platform to develop customized and immersive commerce experiences for Business-to-Business and Business-to-Client customers.
     \item Communicated with clients and business analysts to provide progress reports on the objectives.
     \item Independently learned the Adobe Experience Manager and Magento platforms to be a more versatile developer, as well as practicing consulting skills to provide a better experience to the clients.
 \end{itemize}
+\vspace{-0.3cm}
 % Volunteering Section
 \section*{Volunteering}
 \noindent
-\textbf{Lead coordinator}  {$\bm{\cdot}$}  RBC QTS  Internship Committee \hfill Jan. 2023 – Feb. 2024
+\textbf{Program Coordinator}  {$\bm{\cdot}$}  RBC QTS  Internship Committee \hfill \textit{Jan. 2023 – Feb. 2024}
 \vspace{-0.5em}
 \begin{itemize}[left=0em]
     \item Coordinated the internship program by organizing regular events for the interns, having check-ins with managers as necessary and helping orchestrate the hiring process.
-    \item Provide mentorship to interns to resolve issues they have with their team, manager and peers and to help with career growth.
+    \item Provided mentorship to interns to resolve issues they had with their team, manager or peers and to help with their career growth.
 \end{itemize}
-
+\vspace{-0.3cm}
 % Awards Section
 \section*{Awards}
 \noindent
-\textbf{QTS PERFORMANCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill Dec. 2022 \\
-\textbf{MADE A DIFFERENCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill July 2022 \\
+\textbf{QTS PERFORMANCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill \textit{Dec. 2022} \\
+\textbf{MADE A DIFFERENCE AWARD} {$\bm{\cdot}$} RBC Capital Markets \hfill \textit{July 2022} \\
 
 \end{document}
